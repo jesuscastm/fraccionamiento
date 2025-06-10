@@ -7,5 +7,5 @@ jobs:
     runs-on: ubuntu-latest
   
     steps:
-      - name: Print Variable
+      - name: 'Print Variable'
         run: echo "${{secrets.TEST_TOKEN}}"

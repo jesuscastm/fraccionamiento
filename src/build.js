@@ -1,6 +1,6 @@
 const fs = require('fs');
 const app = require('./app');
-const request = require('supertest')
+const request = require('supertest');
 
 (async () => {
     const res = await request(app).get('/');

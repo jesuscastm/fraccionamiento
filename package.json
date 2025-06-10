@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "name": "first-app",
+  "version": "1.0.0",
+  "description": "Fist node application used as Github Actions example",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "MIT"
+}

@@ -10,16 +10,26 @@ jobs:
     steps:
       - name: Print Variable
         run: echo "${{secrets.TEST_TOKEN}}"
-
       - name: Checkout
         uses: actions/checkout@v4
-     
       - name: Setup
         uses: actions/setup-node@v4
         with:
           node-version: '18'
       - name: Install dependencies
         run: npm install
-      
       - name: Run tests
         run: npm run test
+      - name: Build page
+        run: npm run build
+      - name: Upload artifact
+        uses: actions/uplad-pages-artifact@v3
+        with:
+          path: public/
+
+  deploy:
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        run: echo "Deploy..."

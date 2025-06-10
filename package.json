@@ -5,10 +5,15 @@
   "name": "first-app",
   "version": "1.0.0",
   "description": "Fist node application used as Github Actions example",
-  "main": "index.js",
-  "devDependencies": {},
+  "main": "app.js",
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "supertest": "^7.1.1"
+  },
   "scripts": {
-    "test": "test"
+    "start": "node src/app.js",
+    "test": "jest",
+    "build": "node src/build.js"
   },
   "author": "",
   "license": "MIT"

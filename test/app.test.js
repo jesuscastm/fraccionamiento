@@ -3,7 +3,7 @@ const app = require('../src/app');
 
 describe('GET /', () => {
     it('should return HTML', async () => {
-        const res = await request (app).get('/');
+        const res = await request(app).get('/');
         expect(res.statusCode).toBe(200);
         expect(res.text).toContain('Fraccionamiento');
     });

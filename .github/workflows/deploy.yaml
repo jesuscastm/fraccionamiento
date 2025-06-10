@@ -5,8 +5,17 @@ on:
     branches: ["main"]
 
 jobs:
+<<<<<<< HEAD
   fist-job:
     runs-on: ubuntu-latest
     steps:
       - name: Print Variable
         run: echo "${{secrets.TEST_TOKEN}}"
+=======
+  fist_job:
+    runs-on: ubuntu-latest
+  
+  steps:
+    - name: 'Print Variable'
+      run: echo "${{secrets.TEST_TOKEN}}"
+>>>>>>> 76144ced926c59b9a130391b6888cdf3a0b02362

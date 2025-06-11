@@ -29,7 +29,15 @@ jobs:
 
   deploy:
     if: ${{ always() }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    permissions:
+      pages: write
+      id-token: write
+      
     runs-on: ubuntu-latest
     steps:
       - name: Deploy
-        run: echo "Deploy..."
+        uses: actions/deploy-pages@v4

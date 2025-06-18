@@ -35,10 +35,10 @@ jobs:
 
       - name: Deploy to Azure
         uses: Azure/static-web-apps-deplo@v1
-          with: 
-            azure_static_web_apps_api_token: ${{ secrets.AZURE_TOKEN }}
-            app_location: "public"
-            deployment_action: "upload"
+        with: 
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_TOKEN }}
+          app_location: "public"
+          deployment_action: "upload"
 
   deploy:
     runs-on: ubuntu-latest
